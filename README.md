@@ -61,3 +61,6 @@ It is a psychological, cyberpunk journey about survivor’s guilt, self-forgiven
 *   **Isometric Chess Sprites:** Nikoicho
 *   **Background Music:** ilyas_ananas
 *   **AI Consultation:** Gemini
+
+## Game Demo Link
+https://drive.google.com/drive/folders/1V939LTuaGqSFwZSL8pOq9RmqZy3pmbRQ?usp=sharing
