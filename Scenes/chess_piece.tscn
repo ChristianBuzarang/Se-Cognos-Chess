@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://d3g0tfp3vy85p"]
+
+[ext_resource type="Texture2D" uid="uid://c431mwhm0j3mo" path="res://Assets/Sprites/All_Chess_Pieces.png" id="1_37obo"]
+[ext_resource type="Script" uid="uid://c1n2552b73x34" path="res://Scripts/chess_piece.gd" id="2_esnqv"]
+
+[node name="Piece" type="Sprite2D"]
+z_index = 5
+y_sort_enabled = true
+texture = ExtResource("1_37obo")
+offset = Vector2(0, -11)
+hframes = 15
+vframes = 8
+script = ExtResource("2_esnqv")

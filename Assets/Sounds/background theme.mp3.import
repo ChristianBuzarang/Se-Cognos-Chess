@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dw2uppme4sybd"
+path="res://.godot/imported/background theme.mp3-ed3fe71b80344621bdf02faa3bbfe46c.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sounds/background theme.mp3"
+dest_files=["res://.godot/imported/background theme.mp3-ed3fe71b80344621bdf02faa3bbfe46c.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

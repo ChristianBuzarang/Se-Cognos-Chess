@@ -1,0 +1,1080 @@
+[gd_scene load_steps=21 format=3 uid="uid://r30j1f81cy2i"]
+
+[ext_resource type="Script" uid="uid://6qv7gxxrs70d" path="res://Scripts/board.gd" id="3_shhme"]
+[ext_resource type="PackedScene" uid="uid://d3g0tfp3vy85p" path="res://Scenes/chess_piece.tscn" id="3_uh3b8"]
+[ext_resource type="Texture2D" uid="uid://ca5sgpmldiig1" path="res://Assets/Sprites/Board_1.png" id="3_vjyv8"]
+[ext_resource type="Texture2D" uid="uid://dvmpxbu1ht3kr" path="res://Assets/Sprites/Board_1_Left.png" id="4_hm3vq"]
+[ext_resource type="Texture2D" uid="uid://bckfxhub3qmi7" path="res://Assets/Sprites/Board_2_Left.png" id="5_d7frl"]
+[ext_resource type="Texture2D" uid="uid://47ieks2lh0yu" path="res://Assets/Sprites/Board_Black1.png" id="5_o5s4g"]
+[ext_resource type="Texture2D" uid="uid://cdwgn6otv1gg5" path="res://Assets/Sprites/Board_Grey1.png" id="6_2cdyc"]
+[ext_resource type="PackedScene" uid="uid://bk306q07c84kr" path="res://Scenes/ui.tscn" id="6_bh37u"]
+[ext_resource type="Texture2D" uid="uid://bhr4ppuos3e0s" path="res://Assets/Sprites/Board_2.png" id="6_vjyv8"]
+[ext_resource type="AudioStream" uid="uid://cp1maskpuaru1" path="res://Assets/Sounds/rollover6.ogg" id="7_d7frl"]
+[ext_resource type="AudioStream" uid="uid://dcjitea3o0cwi" path="res://Assets/Sounds/click_001.ogg" id="8_vjyv8"]
+[ext_resource type="AudioStream" uid="uid://f76cmmu8lg4d" path="res://Assets/Sounds/error_008.ogg" id="9_hm3vq"]
+[ext_resource type="Texture2D" uid="uid://cdo071ei24jfk" path="res://Assets/Sprites/Board_Black2.png" id="9_qjv7d"]
+[ext_resource type="Texture2D" uid="uid://cj3lcibn076n1" path="res://Assets/Sprites/Board_Grey2.png" id="10_ardhx"]
+[ext_resource type="AudioStream" uid="uid://2enbxmiww4dh" path="res://Assets/Sounds/switch8.ogg" id="10_iehwj"]
+[ext_resource type="PackedScene" uid="uid://d2vtnsfyn7lu6" path="res://Scenes/disasters.tscn" id="11_2cdyc"]
+[ext_resource type="AudioStream" uid="uid://p85va3wcnxwm" path="res://Assets/Sounds/confirmation_002.ogg" id="11_7iy1p"]
+[ext_resource type="AudioStream" uid="uid://dw2uppme4sybd" path="res://Assets/Sounds/background theme.mp3" id="12_o5s4g"]
+
+[sub_resource type="TileSet" id="TileSet_bh37u"]
+tile_shape = 1
+tile_layout = 5
+tile_size = Vector2i(36, 18)
+
+[sub_resource type="LabelSettings" id="LabelSettings_2wvcj"]
+font_size = 11
+
+[node name="Board" type="TileMapLayer"]
+y_sort_enabled = true
+tile_set = SubResource("TileSet_bh37u")
+script = ExtResource("3_shhme")
+piece_scene = ExtResource("3_uh3b8")
+board_textures = Array[Texture2D]([ExtResource("4_hm3vq"), ExtResource("5_d7frl"), ExtResource("9_qjv7d"), ExtResource("10_ardhx")])
+board_flipped_textures = Array[Texture2D]([ExtResource("3_vjyv8"), ExtResource("6_vjyv8"), ExtResource("5_o5s4g"), ExtResource("6_2cdyc")])
+disaster_scene = ExtResource("11_2cdyc")
+
+[node name="BackgroundLayer" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="ColorRect" type="ColorRect" parent="BackgroundLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -576.0
+offset_top = -324.0
+offset_right = 582.0
+offset_bottom = 328.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.039215688, 0.05490196, 0.078431375, 1)
+
+[node name="BoardImage" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(18, 79.5)
+texture = ExtResource("4_hm3vq")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(17, 65)
+zoom = Vector2(3, 3)
+
+[node name="UI" parent="." instance=ExtResource("6_bh37u")]
+
+[node name="Control" type="Control" parent="."]
+z_index = 2
+layout_mode = 3
+anchors_preset = 0
+offset_left = -119.0
+offset_top = 50.0
+offset_right = -79.0
+offset_bottom = 90.0
+mouse_filter = 2
+
+[node name="Numbers_1" type="Control" parent="Control"]
+layout_mode = 1
+anchor_left = 0.3
+anchor_top = 0.2749998
+anchor_right = 0.3
+anchor_bottom = 0.2749998
+offset_left = 275.0
+offset_top = 48.000008
+offset_right = 315.0
+offset_bottom = 88.00001
+rotation = 1.9012816
+mouse_filter = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="8" type="Label" parent="Control/Numbers_1"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.10821605
+anchor_top = 0.32374567
+anchor_right = 0.10821605
+anchor_bottom = 0.32374567
+offset_left = -25.000002
+offset_top = 10.000002
+offset_right = -18.000002
+offset_bottom = 26.000002
+rotation = -2.2933707
+text = "8"
+label_settings = SubResource("LabelSettings_2wvcj")
+metadata/_edit_use_anchors_ = true
+
+[node name="7" type="Label" parent="Control/Numbers_1"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.12168846
+anchor_top = 0.35470676
+anchor_right = 0.12168846
+anchor_bottom = 0.35470676
+offset_left = -10.239012
+offset_top = 22.54247
+offset_right = -3.2390118
+offset_bottom = 38.542473
+rotation = -2.474431
+text = "7"
+label_settings = SubResource("LabelSettings_2wvcj")
+metadata/_edit_use_anchors_ = true
+
+[node name="6" type="Label" parent="Control/Numbers_1"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.10615406
+anchor_top = 0.3864664
+anchor_right = 0.10615406
+anchor_bottom = 0.3864664
+offset_left = 4.7363653
+offset_top = 35.377487
+offset_right = 11.736366
+offset_bottom = 51.377487
+rotation = -2.3756053
+text = "6"
+label_settings = SubResource("LabelSettings_2wvcj")
+metadata/_edit_use_anchors_ = true
+
+[node name="5" type="Label" parent="Control/Numbers_1"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.09061928
+anchor_top = 0.41822606
+anchor_right = 0.09061928
+anchor_bottom = 0.41822606
+offset_left = 18.441368
+offset_top = 47.591133
+offset_right = 25.441368
+offset_bottom = 63.591133
+rotation = -2.320735
+text = "5"
+label_settings = SubResource("LabelSettings_2wvcj")
+metadata/_edit_use_anchors_ = true
+
+[node name="4" type="Label" parent="Control/Numbers_1"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.11495676
+anchor_top = 0.4891676
+anchor_right = 0.11495676
+anchor_bottom = 0.4891676
+offset_left = 32.14637
+offset_top = 59.80477
+offset_right = 39.14637
+offset_bottom = 75.80477
+rotation = -2.4184108
+text = "4"
+label_settings = SubResource("LabelSettings_2wvcj")
+metadata/_edit_use_anchors_ = true
+
+[node name="3" type="Label" parent="Control/Numbers_1"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.11495705
+anchor_top = 0.4891676
+anchor_right = 0.11495705
+anchor_bottom = 0.4891676
+offset_left = 46.17586
+offset_top = 72.964294
+offset_right = 53.17586
+offset_bottom = 88.964294
+rotation = -2.3912008
+text = "3"
+label_settings = SubResource("LabelSettings_2wvcj")
+metadata/_edit_use_anchors_ = true
+
+[node name="2" type="Label" parent="Control/Numbers_1"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.09942226
+anchor_top = 0.52092725
+anchor_right = 0.09942226
+anchor_bottom = 0.5209274
+offset_left = 61.151253
+offset_top = 85.79932
+offset_right = 68.15125
+offset_bottom = 101.79932
+rotation = -2.3585947
+text = "2"
+label_settings = SubResource("LabelSettings_2wvcj")
+metadata/_edit_use_anchors_ = true
+
+[node name="1" type="Label" parent="Control/Numbers_1"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.14740734
+anchor_top = 0.5837557
+anchor_right = 0.14740734
+anchor_bottom = 0.58375585
+offset_left = 73.910355
+offset_top = 98.33746
+offset_right = 80.910355
+offset_bottom = 114.33746
+rotation = -2.3068883
+text = "1"
+label_settings = SubResource("LabelSettings_2wvcj")
+metadata/_edit_use_anchors_ = true
+
+[node name="Numbers_2" type="Control" parent="Control"]
+visible = false
+anchors_preset = 0
+offset_left = -5.0
+offset_top = 23.0
+offset_right = 1.7517548
+offset_bottom = 34.967438
+rotation = 0.8279058
+mouse_filter = 2
+
+[node name="8" type="Label" parent="Control/Numbers_2"]
+layout_mode = 0
+offset_left = 3.066258
+offset_top = 5.531551
+offset_right = 10.066257
+offset_bottom = 21.531551
+rotation = -0.56557196
+text = "8"
+label_settings = SubResource("LabelSettings_2wvcj")
+
+[node name="7" type="Label" parent="Control/Numbers_2"]
+layout_mode = 0
+offset_left = 23.283401
+offset_top = -1.6980734
+offset_right = 30.283401
+offset_bottom = 14.301927
+rotation = -0.56557196
+text = "7"
+label_settings = SubResource("LabelSettings_2wvcj")
+
+[node name="6" type="Label" parent="Control/Numbers_2"]
+layout_mode = 0
+offset_left = 41.41117
+offset_top = -8.131064
+offset_right = 48.41117
+offset_bottom = 7.8689356
+rotation = -0.56557196
+text = "6"
+label_settings = SubResource("LabelSettings_2wvcj")
+
+[node name="5" type="Label" parent="Control/Numbers_2"]
+layout_mode = 0
+offset_left = 60.8918
+offset_top = -16.0371
+offset_right = 67.8918
+offset_bottom = -0.03709221
+rotation = -0.56557196
+text = "5"
+label_settings = SubResource("LabelSettings_2wvcj")
+
+[node name="4" type="Label" parent="Control/Numbers_2"]
+layout_mode = 0
+offset_left = 79.69601
+offset_top = -23.206623
+offset_right = 86.69601
+offset_bottom = -7.206623
+rotation = -0.56557196
+text = "4"
+label_settings = SubResource("LabelSettings_2wvcj")
+
+[node name="3" type="Label" parent="Control/Numbers_2"]
+layout_mode = 0
+offset_left = 97.08727
+offset_top = -30.31604
+offset_right = 104.08727
+offset_bottom = -14.31604
+rotation = -0.56557196
+text = "3"
+label_settings = SubResource("LabelSettings_2wvcj")
+
+[node name="2" type="Label" parent="Control/Numbers_2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5292847
+anchor_top = 0.027219245
+anchor_right = 0.5292847
+anchor_bottom = 0.027219245
+offset_left = 112.31787
+offset_top = -37.81131
+offset_right = 119.31787
+offset_bottom = -21.81131
+rotation = -0.56557196
+text = "2"
+label_settings = SubResource("LabelSettings_2wvcj")
+metadata/_edit_use_anchors_ = true
+
+[node name="1" type="Label" parent="Control/Numbers_2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.77843666
+anchor_top = -0.019153753
+anchor_right = 0.77843666
+anchor_bottom = -0.019153753
+offset_left = 131.5292
+offset_top = -45.222477
+offset_right = 138.5292
+offset_bottom = -29.222477
+rotation = -0.56557196
+text = "1"
+label_settings = SubResource("LabelSettings_2wvcj")
+metadata/_edit_use_anchors_ = true
+
+[node name="Numbers_3" type="Control" parent="Control"]
+visible = false
+layout_mode = 1
+anchor_left = 0.3
+anchor_top = 0.2749998
+anchor_right = 0.3
+anchor_bottom = 0.2749998
+offset_left = 275.0
+offset_top = 48.000008
+offset_right = 315.0
+offset_bottom = 88.00001
+rotation = 1.9012816
+mouse_filter = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="1" type="Label" parent="Control/Numbers_3"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.10821605
+anchor_top = 0.32374567
+anchor_right = 0.10821605
+anchor_bottom = 0.32374567
+offset_left = -25.000002
+offset_top = 10.000002
+offset_right = -18.000002
+offset_bottom = 26.000002
+rotation = -2.2933707
+text = "1"
+label_settings = SubResource("LabelSettings_2wvcj")
+metadata/_edit_use_anchors_ = true
+
+[node name="2" type="Label" parent="Control/Numbers_3"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.12168846
+anchor_top = 0.35470676
+anchor_right = 0.12168846
+anchor_bottom = 0.35470676
+offset_left = -10.239012
+offset_top = 22.54247
+offset_right = -3.2390118
+offset_bottom = 38.542473
+rotation = -2.474431
+text = "2"
+label_settings = SubResource("LabelSettings_2wvcj")
+metadata/_edit_use_anchors_ = true
+
+[node name="3" type="Label" parent="Control/Numbers_3"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.10615406
+anchor_top = 0.3864664
+anchor_right = 0.10615406
+anchor_bottom = 0.3864664
+offset_left = 4.7363653
+offset_top = 35.377487
+offset_right = 11.736366
+offset_bottom = 51.377487
+rotation = -2.3756053
+text = "3"
+label_settings = SubResource("LabelSettings_2wvcj")
+metadata/_edit_use_anchors_ = true
+
+[node name="4" type="Label" parent="Control/Numbers_3"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.09061928
+anchor_top = 0.41822606
+anchor_right = 0.09061928
+anchor_bottom = 0.41822606
+offset_left = 18.441368
+offset_top = 47.591133
+offset_right = 25.441368
+offset_bottom = 63.591133
+rotation = -2.320735
+text = "4"
+label_settings = SubResource("LabelSettings_2wvcj")
+metadata/_edit_use_anchors_ = true
+
+[node name="5" type="Label" parent="Control/Numbers_3"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.10684462
+anchor_top = 0.4655203
+anchor_right = 0.10684462
+anchor_bottom = 0.4655203
+offset_left = 32.14637
+offset_top = 59.80477
+offset_right = 39.14637
+offset_bottom = 75.80477
+rotation = -2.4184108
+text = "5"
+label_settings = SubResource("LabelSettings_2wvcj")
+metadata/_edit_use_anchors_ = true
+
+[node name="6" type="Label" parent="Control/Numbers_3"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.10684452
+anchor_top = 0.46552047
+anchor_right = 0.10684452
+anchor_bottom = 0.46552047
+offset_left = 46.17586
+offset_top = 72.964294
+offset_right = 53.17586
+offset_bottom = 88.964294
+rotation = -2.3912008
+text = "6"
+label_settings = SubResource("LabelSettings_2wvcj")
+metadata/_edit_use_anchors_ = true
+
+[node name="7" type="Label" parent="Control/Numbers_3"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.09942226
+anchor_top = 0.52092725
+anchor_right = 0.09942226
+anchor_bottom = 0.5209274
+offset_left = 61.151253
+offset_top = 85.79932
+offset_right = 68.15125
+offset_bottom = 101.79932
+rotation = -2.3585947
+text = "7"
+label_settings = SubResource("LabelSettings_2wvcj")
+metadata/_edit_use_anchors_ = true
+
+[node name="8" type="Label" parent="Control/Numbers_3"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.14740734
+anchor_top = 0.5837557
+anchor_right = 0.14740734
+anchor_bottom = 0.58375585
+offset_left = 73.910355
+offset_top = 98.33746
+offset_right = 80.910355
+offset_bottom = 114.33746
+rotation = -2.3068883
+text = "8"
+label_settings = SubResource("LabelSettings_2wvcj")
+metadata/_edit_use_anchors_ = true
+
+[node name="Numbers_4" type="Control" parent="Control"]
+visible = false
+anchors_preset = 0
+offset_left = -5.0
+offset_top = 23.0
+offset_right = 1.7517548
+offset_bottom = 34.967438
+rotation = 0.8279058
+mouse_filter = 2
+
+[node name="8" type="Label" parent="Control/Numbers_4"]
+layout_mode = 0
+offset_left = 3.066258
+offset_top = 5.531551
+offset_right = 10.066257
+offset_bottom = 21.531551
+rotation = -0.56557196
+text = "1"
+label_settings = SubResource("LabelSettings_2wvcj")
+
+[node name="7" type="Label" parent="Control/Numbers_4"]
+layout_mode = 0
+offset_left = 23.283401
+offset_top = -1.6980734
+offset_right = 30.283401
+offset_bottom = 14.301927
+rotation = -0.56557196
+text = "2"
+label_settings = SubResource("LabelSettings_2wvcj")
+
+[node name="6" type="Label" parent="Control/Numbers_4"]
+layout_mode = 0
+offset_left = 41.41117
+offset_top = -8.131064
+offset_right = 48.41117
+offset_bottom = 7.8689356
+rotation = -0.56557196
+text = "3"
+label_settings = SubResource("LabelSettings_2wvcj")
+
+[node name="5" type="Label" parent="Control/Numbers_4"]
+layout_mode = 0
+offset_left = 60.8918
+offset_top = -16.0371
+offset_right = 67.8918
+offset_bottom = -0.03709221
+rotation = -0.56557196
+text = "4"
+label_settings = SubResource("LabelSettings_2wvcj")
+
+[node name="4" type="Label" parent="Control/Numbers_4"]
+layout_mode = 0
+offset_left = 79.69601
+offset_top = -23.206623
+offset_right = 86.69601
+offset_bottom = -7.206623
+rotation = -0.56557196
+text = "5"
+label_settings = SubResource("LabelSettings_2wvcj")
+
+[node name="3" type="Label" parent="Control/Numbers_4"]
+layout_mode = 0
+offset_left = 97.08727
+offset_top = -30.31604
+offset_right = 104.08727
+offset_bottom = -14.31604
+rotation = -0.56557196
+text = "6"
+label_settings = SubResource("LabelSettings_2wvcj")
+
+[node name="2" type="Label" parent="Control/Numbers_4"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.63836914
+anchor_top = 0.08374145
+anchor_right = 0.63836914
+anchor_bottom = 0.08374145
+offset_left = 112.31787
+offset_top = -37.81131
+offset_right = 119.31787
+offset_bottom = -21.81131
+rotation = -0.56557196
+text = "7"
+label_settings = SubResource("LabelSettings_2wvcj")
+metadata/_edit_use_anchors_ = true
+
+[node name="1" type="Label" parent="Control/Numbers_4"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.8875211
+anchor_top = 0.037368767
+anchor_right = 0.8875211
+anchor_bottom = 0.037368767
+offset_left = 131.5292
+offset_top = -45.222477
+offset_right = 138.5292
+offset_bottom = -29.222477
+rotation = -0.56557196
+text = "8"
+label_settings = SubResource("LabelSettings_2wvcj")
+metadata/_edit_use_anchors_ = true
+
+[node name="Letters_1" type="Control" parent="Control"]
+anchors_preset = 0
+offset_left = -5.0
+offset_top = 23.0
+offset_right = 1.7517548
+offset_bottom = 34.967438
+rotation = 0.8279058
+mouse_filter = 2
+
+[node name="a" type="Label" parent="Control/Letters_1"]
+layout_mode = 0
+offset_left = 3.7426777
+offset_top = 4.7950344
+offset_right = 10.742678
+offset_bottom = 20.795034
+rotation = -0.56557196
+text = "a"
+label_settings = SubResource("LabelSettings_2wvcj")
+
+[node name="b" type="Label" parent="Control/Letters_1"]
+layout_mode = 0
+offset_left = 23.283401
+offset_top = -1.6980734
+offset_right = 30.283401
+offset_bottom = 14.301927
+rotation = -0.56557196
+text = "b"
+label_settings = SubResource("LabelSettings_2wvcj")
+
+[node name="c" type="Label" parent="Control/Letters_1"]
+layout_mode = 0
+offset_left = 41.351074
+offset_top = -9.544001
+offset_right = 48.351074
+offset_bottom = 6.4559994
+rotation = -0.56557196
+text = "c"
+label_settings = SubResource("LabelSettings_2wvcj")
+
+[node name="d" type="Label" parent="Control/Letters_1"]
+layout_mode = 0
+offset_left = 60.8918
+offset_top = -16.0371
+offset_right = 67.8918
+offset_bottom = -0.03709221
+rotation = -0.56557196
+text = "d"
+label_settings = SubResource("LabelSettings_2wvcj")
+
+[node name="e" type="Label" parent="Control/Letters_1"]
+layout_mode = 0
+offset_left = 79.6359
+offset_top = -24.619553
+offset_right = 86.6359
+offset_bottom = -8.619553
+rotation = -0.56557196
+text = "e"
+label_settings = SubResource("LabelSettings_2wvcj")
+
+[node name="f" type="Label" parent="Control/Letters_1"]
+layout_mode = 0
+offset_left = 97.08727
+offset_top = -30.31604
+offset_right = 104.08727
+offset_bottom = -14.31604
+rotation = -0.56557196
+text = "f"
+label_settings = SubResource("LabelSettings_2wvcj")
+
+[node name="g" type="Label" parent="Control/Letters_1"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.41129827
+anchor_top = -0.14736745
+anchor_right = 0.41129827
+anchor_bottom = -0.14736745
+offset_left = 112.31787
+offset_top = -37.81131
+offset_right = 119.31787
+offset_bottom = -21.81131
+rotation = -0.56557196
+text = "g"
+label_settings = SubResource("LabelSettings_2wvcj")
+metadata/_edit_use_anchors_ = true
+
+[node name="h" type="Label" parent="Control/Letters_1"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.77843666
+anchor_top = -0.019153753
+anchor_right = 0.77843666
+anchor_bottom = -0.019153753
+offset_left = 131.5292
+offset_top = -45.222477
+offset_right = 138.5292
+offset_bottom = -29.222477
+rotation = -0.56557196
+text = "h"
+label_settings = SubResource("LabelSettings_2wvcj")
+metadata/_edit_use_anchors_ = true
+
+[node name="Letters_2" type="Control" parent="Control"]
+visible = false
+layout_mode = 1
+anchor_left = 0.3
+anchor_top = 0.2749998
+anchor_right = 0.3
+anchor_bottom = 0.2749998
+offset_left = 275.0
+offset_top = 48.000008
+offset_right = 315.0
+offset_bottom = 88.00001
+rotation = 1.9012816
+mouse_filter = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="h" type="Label" parent="Control/Letters_2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.10821605
+anchor_top = 0.32374567
+anchor_right = 0.10821605
+anchor_bottom = 0.32374567
+offset_left = -25.000002
+offset_top = 10.000002
+offset_right = -18.000002
+offset_bottom = 26.000002
+rotation = -2.2933707
+text = "h"
+label_settings = SubResource("LabelSettings_2wvcj")
+metadata/_edit_use_anchors_ = true
+
+[node name="g" type="Label" parent="Control/Letters_2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.08250676
+anchor_top = 0.39457902
+anchor_right = 0.08250676
+anchor_bottom = 0.39457902
+offset_left = -10.239012
+offset_top = 22.54247
+offset_right = -3.2390118
+offset_bottom = 38.542473
+rotation = -2.474431
+text = "g"
+label_settings = SubResource("LabelSettings_2wvcj")
+metadata/_edit_use_anchors_ = true
+
+[node name="f" type="Label" parent="Control/Letters_2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.10615406
+anchor_top = 0.3864664
+anchor_right = 0.10615406
+anchor_bottom = 0.3864664
+offset_left = 4.7363653
+offset_top = 35.377487
+offset_right = 11.736366
+offset_bottom = 51.377487
+rotation = -2.3756053
+text = "f"
+label_settings = SubResource("LabelSettings_2wvcj")
+metadata/_edit_use_anchors_ = true
+
+[node name="e" type="Label" parent="Control/Letters_2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.09061928
+anchor_top = 0.41822606
+anchor_right = 0.09061928
+anchor_bottom = 0.41822606
+offset_left = 18.441368
+offset_top = 47.591133
+offset_right = 25.441368
+offset_bottom = 63.591133
+rotation = -2.320735
+text = "e"
+label_settings = SubResource("LabelSettings_2wvcj")
+metadata/_edit_use_anchors_ = true
+
+[node name="d" type="Label" parent="Control/Letters_2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.13049173
+anchor_top = 0.45740777
+anchor_right = 0.13049173
+anchor_bottom = 0.45740777
+offset_left = 32.14637
+offset_top = 59.80477
+offset_right = 39.14637
+offset_bottom = 75.80477
+rotation = -2.4184108
+text = "d"
+label_settings = SubResource("LabelSettings_2wvcj")
+metadata/_edit_use_anchors_ = true
+
+[node name="c" type="Label" parent="Control/Letters_2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.11495705
+anchor_top = 0.4891676
+anchor_right = 0.11495705
+anchor_bottom = 0.4891676
+offset_left = 46.17586
+offset_top = 72.964294
+offset_right = 53.17586
+offset_bottom = 88.964294
+rotation = -2.3912008
+text = "c"
+label_settings = SubResource("LabelSettings_2wvcj")
+metadata/_edit_use_anchors_ = true
+
+[node name="b" type="Label" parent="Control/Letters_2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.09942226
+anchor_top = 0.52092725
+anchor_right = 0.09942226
+anchor_bottom = 0.5209274
+offset_left = 61.151253
+offset_top = 85.79932
+offset_right = 68.15125
+offset_bottom = 101.79932
+rotation = -2.3585947
+text = "b"
+label_settings = SubResource("LabelSettings_2wvcj")
+metadata/_edit_use_anchors_ = true
+
+[node name="a" type="Label" parent="Control/Letters_2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.14740734
+anchor_top = 0.5837557
+anchor_right = 0.14740734
+anchor_bottom = 0.58375585
+offset_left = 73.910355
+offset_top = 98.33746
+offset_right = 80.910355
+offset_bottom = 114.33746
+rotation = -2.3068883
+text = "a"
+label_settings = SubResource("LabelSettings_2wvcj")
+metadata/_edit_use_anchors_ = true
+
+[node name="Letters_3" type="Control" parent="Control"]
+visible = false
+anchors_preset = 0
+offset_left = -5.0
+offset_top = 23.0
+offset_right = 1.7517548
+offset_bottom = 34.967438
+rotation = 0.8279058
+mouse_filter = 2
+
+[node name="h" type="Label" parent="Control/Letters_3"]
+layout_mode = 0
+offset_left = 3.7426777
+offset_top = 4.7950344
+offset_right = 10.742678
+offset_bottom = 20.795034
+rotation = -0.56557196
+text = "h"
+label_settings = SubResource("LabelSettings_2wvcj")
+
+[node name="g" type="Label" parent="Control/Letters_3"]
+layout_mode = 0
+offset_left = 20.39742
+offset_top = -2.9908047
+offset_right = 27.39742
+offset_bottom = 13.009195
+rotation = -0.56557196
+text = "g"
+label_settings = SubResource("LabelSettings_2wvcj")
+
+[node name="f" type="Label" parent="Control/Letters_3"]
+layout_mode = 0
+offset_left = 41.351074
+offset_top = -9.544001
+offset_right = 48.351074
+offset_bottom = 6.4559994
+rotation = -0.56557196
+text = "f"
+label_settings = SubResource("LabelSettings_2wvcj")
+
+[node name="e" type="Label" parent="Control/Letters_3"]
+layout_mode = 0
+offset_left = 60.8918
+offset_top = -16.0371
+offset_right = 67.8918
+offset_bottom = -0.03709221
+rotation = -0.56557196
+text = "e"
+label_settings = SubResource("LabelSettings_2wvcj")
+
+[node name="d" type="Label" parent="Control/Letters_3"]
+layout_mode = 0
+offset_left = 79.69601
+offset_top = -23.206623
+offset_right = 86.69601
+offset_bottom = -7.206623
+rotation = -0.56557196
+text = "d"
+label_settings = SubResource("LabelSettings_2wvcj")
+
+[node name="c" type="Label" parent="Control/Letters_3"]
+layout_mode = 0
+offset_left = 97.08727
+offset_top = -30.31604
+offset_right = 104.08727
+offset_bottom = -14.31604
+rotation = -0.56557196
+text = "c"
+label_settings = SubResource("LabelSettings_2wvcj")
+
+[node name="b" type="Label" parent="Control/Letters_3"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5292847
+anchor_top = 0.027219245
+anchor_right = 0.5292847
+anchor_bottom = 0.027219245
+offset_left = 112.31787
+offset_top = -37.81131
+offset_right = 119.31787
+offset_bottom = -21.81131
+rotation = -0.56557196
+text = "b"
+label_settings = SubResource("LabelSettings_2wvcj")
+metadata/_edit_use_anchors_ = true
+
+[node name="a" type="Label" parent="Control/Letters_3"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.77843666
+anchor_top = -0.019153753
+anchor_right = 0.77843666
+anchor_bottom = -0.019153753
+offset_left = 131.5292
+offset_top = -45.222477
+offset_right = 138.5292
+offset_bottom = -29.222477
+rotation = -0.56557196
+text = "a"
+label_settings = SubResource("LabelSettings_2wvcj")
+metadata/_edit_use_anchors_ = true
+
+[node name="Letters_4" type="Control" parent="Control"]
+visible = false
+layout_mode = 1
+anchor_left = 0.3
+anchor_top = 0.2749998
+anchor_right = 0.3
+anchor_bottom = 0.2749998
+offset_left = 275.0
+offset_top = 48.000008
+offset_right = 315.0
+offset_bottom = 88.00001
+rotation = 1.9012816
+mouse_filter = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="a" type="Label" parent="Control/Letters_4"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.10821605
+anchor_top = 0.32374567
+anchor_right = 0.10821605
+anchor_bottom = 0.32374567
+offset_left = -25.000002
+offset_top = 10.000002
+offset_right = -18.000002
+offset_bottom = 26.000002
+rotation = -2.2933707
+text = "a"
+label_settings = SubResource("LabelSettings_2wvcj")
+metadata/_edit_use_anchors_ = true
+
+[node name="b" type="Label" parent="Control/Letters_4"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.12168846
+anchor_top = 0.3547067
+anchor_right = 0.12168846
+anchor_bottom = 0.35470676
+offset_left = -10.239012
+offset_top = 22.54247
+offset_right = -3.2390118
+offset_bottom = 38.542473
+rotation = -2.474431
+text = "b"
+label_settings = SubResource("LabelSettings_2wvcj")
+metadata/_edit_use_anchors_ = true
+
+[node name="c" type="Label" parent="Control/Letters_4"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.050747275
+anchor_top = 0.37904435
+anchor_right = 0.050747275
+anchor_bottom = 0.37904435
+offset_left = 4.7363653
+offset_top = 35.377487
+offset_right = 11.736366
+offset_bottom = 51.377487
+rotation = -2.3756053
+text = "c"
+label_settings = SubResource("LabelSettings_2wvcj")
+metadata/_edit_use_anchors_ = true
+
+[node name="d" type="Label" parent="Control/Letters_4"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.09061928
+anchor_top = 0.41822606
+anchor_right = 0.09061928
+anchor_bottom = 0.41822606
+offset_left = 18.441368
+offset_top = 47.591133
+offset_right = 25.441368
+offset_bottom = 63.591133
+rotation = -2.320735
+text = "d"
+label_settings = SubResource("LabelSettings_2wvcj")
+metadata/_edit_use_anchors_ = true
+
+[node name="e" type="Label" parent="Control/Letters_4"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.11495676
+anchor_top = 0.4891676
+anchor_right = 0.11495676
+anchor_bottom = 0.4891676
+offset_left = 32.14637
+offset_top = 59.80477
+offset_right = 39.14637
+offset_bottom = 75.80477
+rotation = -2.4184108
+text = "e"
+label_settings = SubResource("LabelSettings_2wvcj")
+metadata/_edit_use_anchors_ = true
+
+[node name="f" type="Label" parent="Control/Letters_4"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.11495705
+anchor_top = 0.4891676
+anchor_right = 0.11495705
+anchor_bottom = 0.4891676
+offset_left = 46.17586
+offset_top = 72.964294
+offset_right = 53.17586
+offset_bottom = 88.964294
+rotation = -2.3912008
+text = "f"
+label_settings = SubResource("LabelSettings_2wvcj")
+metadata/_edit_use_anchors_ = true
+
+[node name="g" type="Label" parent="Control/Letters_4"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.060240556
+anchor_top = 0.5607994
+anchor_right = 0.060240556
+anchor_bottom = 0.5607996
+offset_left = 61.151253
+offset_top = 85.79932
+offset_right = 68.15125
+offset_bottom = 101.79932
+rotation = -2.3585947
+text = "g"
+label_settings = SubResource("LabelSettings_2wvcj")
+metadata/_edit_use_anchors_ = true
+
+[node name="h" type="Label" parent="Control/Letters_4"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.14740734
+anchor_top = 0.5837557
+anchor_right = 0.14740734
+anchor_bottom = 0.58375585
+offset_left = 73.910355
+offset_top = 98.33746
+offset_right = 80.910355
+offset_bottom = 114.33746
+rotation = -2.3068883
+text = "h"
+label_settings = SubResource("LabelSettings_2wvcj")
+metadata/_edit_use_anchors_ = true
+
+[node name="SfxMove" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_d7frl")
+bus = &"SFX"
+
+[node name="SfxClick" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_vjyv8")
+bus = &"SFX"
+
+[node name="SfxCapture" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_hm3vq")
+bus = &"SFX"
+
+[node name="SfxCheck" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_iehwj")
+bus = &"SFX"
+
+[node name="SfxWin" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_7iy1p")
+bus = &"SFX"
+
+[node name="BGM" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_o5s4g")
+volume_db = -10.0
+autoplay = true
+bus = &"Music"

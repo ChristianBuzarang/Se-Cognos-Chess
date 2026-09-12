@@ -1,0 +1,51 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[animation]
+
+compatibility/default_parent_skeleton_in_mesh_instance_3d=true
+
+[application]
+
+config/name="Se Cognos Chess"
+run/main_scene="uid://r30j1f81cy2i"
+config/features=PackedStringArray("4.7", "GL Compatibility")
+config/icon="uid://dtndmmeqjf6va"
+config/windows_native_icon="res://Assets/Sprites/se_cognos_logo.ico"
+
+[autoload]
+
+CampaignData="*res://Scripts/campaign_data.gd"
+SaveManager="*res://Scripts/save_manager.gd"
+NetworkManager="*res://Scripts/network_manager.gd"
+AIManager="*res://Scripts/ai_manager.gd"
+Rulebook="*res://Scripts/rulebook.gd"
+Spawner="*res://Scripts/spawner.gd"
+Helpers="*res://Scripts/helpers.gd"
+Global="*res://Scripts/global.gd"
+VFXManager="*res://Scripts/vfx_manager.gd"
+PuzzleManager="*res://Scripts/puzzle_manager.gd"
+
+[display]
+
+window/size/mode=4
+window/size/resizable=false
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+
+[dotnet]
+
+project/assembly_name="OmniChess"
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"

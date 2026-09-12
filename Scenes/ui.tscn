@@ -1,0 +1,2380 @@
+[gd_scene format=3 uid="uid://bk306q07c84kr"]
+
+[ext_resource type="Script" uid="uid://bi4vssyvsbif6" path="res://Scripts/ui_manager.gd" id="1_jxero"]
+[ext_resource type="Texture2D" uid="uid://niuknde5hbfu" path="res://Assets/Sprites/map_bg_random.png" id="2_mmixe"]
+[ext_resource type="Texture2D" uid="uid://c431mwhm0j3mo" path="res://Assets/Sprites/All_Chess_Pieces.png" id="2_nf4gj"]
+[ext_resource type="Texture2D" uid="uid://bxqhbw01ntojd" path="res://Assets/Sprites/Pawn_Jump.png" id="2_qdvrb"]
+[ext_resource type="Texture2D" uid="uid://3uw2qidtxgqd" path="res://Assets/Sprites/map_bg_magic.png" id="3_nt8jn"]
+[ext_resource type="Texture2D" uid="uid://bfqco5s7me2cy" path="res://Assets/Sprites/map_bg_interpsyche.png" id="4_g0wmg"]
+[ext_resource type="Texture2D" uid="uid://d2plxriffg6h3" path="res://Assets/Sprites/map_bg_cataclysm.png" id="5_4vbiv"]
+[ext_resource type="Texture2D" uid="uid://lvu473qaw3hc" path="res://Assets/Sprites/map_bg_blind.png" id="6_3r70p"]
+[ext_resource type="Texture2D" uid="uid://sfu6aw2u6dte" path="res://Assets/Sprites/map_bg_standard.png" id="7_8fs27"]
+[ext_resource type="Texture2D" uid="uid://bbtvi0kb2o447" path="res://Assets/Sprites/Tile_Gold.png" id="8_8fs27"]
+[ext_resource type="Texture2D" uid="uid://bl43cjlmr7ndn" path="res://Assets/Sprites/act one.PNG" id="8_fcexb"]
+[ext_resource type="Texture2D" uid="uid://d1wpp2rdw1px6" path="res://Assets/Sprites/act two.PNG" id="9_v4f2e"]
+[ext_resource type="Texture2D" uid="uid://f1i3u06t5ufq" path="res://Assets/Sprites/Tile_Green.png" id="9_whq80"]
+[ext_resource type="Texture2D" uid="uid://c2f3fs6wa4hv0" path="res://Assets/Sprites/act three.PNG" id="10_fe2sg"]
+[ext_resource type="Texture2D" uid="uid://cfb3hmkk22jx8" path="res://Assets/Sprites/Tile_Gray.png" id="10_kuui0"]
+[ext_resource type="Texture2D" uid="uid://ckptpf7e5ujky" path="res://Assets/Sprites/act four.PNG" id="11_jd57c"]
+[ext_resource type="Texture2D" uid="uid://507qubl6favb" path="res://Assets/Sprites/act five.PNG" id="12_85lyl"]
+[ext_resource type="Texture2D" uid="uid://dkwae6c1yg586" path="res://Assets/Sprites/game_title.png" id="13_8fs27"]
+[ext_resource type="Texture2D" uid="uid://073wfy5h2x4" path="res://Assets/Sprites/act six.PNG" id="13_mplvk"]
+[ext_resource type="Texture2D" uid="uid://b1l34teok72hw" path="res://Assets/Sprites/ButtonEmpty.png" id="14_whq80"]
+[ext_resource type="Texture2D" uid="uid://d2yaav5tjgx3q" path="res://Assets/Sprites/intro.png" id="18_fe2sg"]
+[ext_resource type="Texture2D" uid="uid://w145j5hvx2q1" path="res://Assets/Sprites/ending.png" id="19_jd57c"]
+[ext_resource type="Texture2D" uid="uid://ckmht5p2l47nb" path="res://Assets/Sprites/CIT-U College of Computer Studies.png" id="23_nbcfj"]
+[ext_resource type="Texture2D" uid="uid://ck7v0l171v6x2" path="res://Assets/Sprites/title_white 2.png" id="24_3g2cg"]
+[ext_resource type="Texture2D" uid="uid://bq4a6femy00ve" path="res://Assets/Sprites/logo.png" id="25_wc4t8"]
+[ext_resource type="Texture2D" uid="uid://d3qly86xyfv0" path="res://Assets/Sprites/dost logo.webp" id="26_dx4fu"]
+[ext_resource type="Texture2D" uid="uid://dff40eaxnua56" path="res://Assets/Sprites/moyveTeam-fin.png" id="27_kjfio"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_smcll"]
+bg_color = Color(0.14733289, 0.1680183, 0.20285092, 0.75000006)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m78vo"]
+bg_color = Color(0.11372549, 0.13333334, 0.16078432, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_d42i4"]
+texture = ExtResource("14_whq80")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fcexb"]
+texture = ExtResource("14_whq80")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_v4f2e"]
+texture = ExtResource("14_whq80")
+modulate_color = Color(0.5019608, 0.5254902, 0.6313726, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3r70p"]
+bg_color = Color(0.14733289, 0.1680183, 0.20285092, 0.75000006)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fe2sg"]
+texture = ExtResource("14_whq80")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jd57c"]
+texture = ExtResource("14_whq80")
+modulate_color = Color(0.5019608, 0.5254902, 0.6313726, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ryf15"]
+bg_color = Color(0.11372549, 0.13333334, 0.16078432, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="LabelSettings" id="LabelSettings_jxero"]
+font_size = 25
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_85lyl"]
+texture = ExtResource("14_whq80")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mplvk"]
+texture = ExtResource("14_whq80")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pmm21"]
+texture = ExtResource("14_whq80")
+modulate_color = Color(0.5019608, 0.5254902, 0.6313726, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mmixe"]
+bg_color = Color(0.14509805, 0.16862746, 0.20392157, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nbcfj"]
+texture = ExtResource("14_whq80")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3g2cg"]
+texture = ExtResource("14_whq80")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wc4t8"]
+texture = ExtResource("14_whq80")
+modulate_color = Color(0.5019608, 0.5254902, 0.6313726, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nt8jn"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3iodw"]
+texture = ExtResource("14_whq80")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kllwe"]
+texture = ExtResource("14_whq80")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wivgh"]
+texture = ExtResource("14_whq80")
+modulate_color = Color(0.5019608, 0.5254902, 0.6313726, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jd57c"]
+bg_color = Color(0.11372549, 0.13333334, 0.16078432, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qdvrb"]
+bg_color = Color(0.11372549, 0.13333334, 0.16078432, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dx4fu"]
+texture = ExtResource("14_whq80")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kjfio"]
+texture = ExtResource("14_whq80")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0o3wc"]
+texture = ExtResource("14_whq80")
+modulate_color = Color(0.5019608, 0.5254902, 0.6313726, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4vbiv"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3r70p"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8fs27"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_whq80"]
+
+[sub_resource type="Animation" id="Animation_q7pk6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_2246s"]
+resource_name = "hopping"
+length = 1.35
+loop_mode = 1
+step = 0.15
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.3, 0.45000002, 0.6, 0.75, 0.90000004, 1.0500001, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_m78vo"]
+_data = {
+&"RESET": SubResource("Animation_q7pk6"),
+&"hopping": SubResource("Animation_2246s")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g0wmg"]
+bg_color = Color(0.14509805, 0.16862746, 0.20392157, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ebfgw"]
+texture = ExtResource("14_whq80")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mirbq"]
+texture = ExtResource("14_whq80")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ipwe8"]
+texture = ExtResource("14_whq80")
+modulate_color = Color(0.5019608, 0.5254902, 0.6313726, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2246s"]
+bg_color = Color(0.11372549, 0.13333334, 0.16078432, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kuui0"]
+texture = ExtResource("14_whq80")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_smy1h"]
+texture = ExtResource("14_whq80")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lkjmk"]
+texture = ExtResource("14_whq80")
+modulate_color = Color(0.5019608, 0.5254902, 0.6313726, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0o3wc"]
+bg_color = Color(0.11372549, 0.13333334, 0.16078432, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jxero"]
+content_margin_left = 20.0
+content_margin_top = 20.0
+content_margin_right = 20.0
+content_margin_bottom = 20.0
+bg_color = Color(0.11372549, 0.13333334, 0.16078432, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_al6qt"]
+texture = ExtResource("14_whq80")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mdsrb"]
+texture = ExtResource("14_whq80")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bsvcc"]
+texture = ExtResource("14_whq80")
+modulate_color = Color(0.5019608, 0.5254902, 0.6313726, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4vbiv"]
+bg_color = Color(0.14509805, 0.16862746, 0.20392157, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ivk8b"]
+texture = ExtResource("14_whq80")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_oywgw"]
+texture = ExtResource("14_whq80")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_d4tfc"]
+texture = ExtResource("14_whq80")
+modulate_color = Color(0.5019608, 0.5254902, 0.6313726, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q7pk6"]
+bg_color = Color(0.14509805, 0.16862746, 0.20392157, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mmd7r"]
+texture = ExtResource("14_whq80")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bwki6"]
+texture = ExtResource("14_whq80")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4dphw"]
+texture = ExtResource("14_whq80")
+modulate_color = Color(0.5019608, 0.5254902, 0.6313726, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8fs27"]
+bg_color = Color(0.14509805, 0.16862746, 0.20392157, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2yoed"]
+texture = ExtResource("14_whq80")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_x47cw"]
+texture = ExtResource("14_whq80")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hkgno"]
+texture = ExtResource("14_whq80")
+modulate_color = Color(0.5019608, 0.5254902, 0.6313726, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kuui0"]
+bg_color = Color(0.14509805, 0.16862746, 0.20392157, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yi1q0"]
+texture = ExtResource("14_whq80")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mr42v"]
+texture = ExtResource("14_whq80")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_asfq7"]
+texture = ExtResource("14_whq80")
+modulate_color = Color(0.5019608, 0.5254902, 0.6313726, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_t2f3d"]
+texture = ExtResource("14_whq80")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yj361"]
+texture = ExtResource("14_whq80")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_u0vrq"]
+texture = ExtResource("14_whq80")
+modulate_color = Color(0.5019608, 0.5254902, 0.6313726, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_whq80"]
+bg_color = Color(0.14509805, 0.16862746, 0.20392157, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_72dsl"]
+texture = ExtResource("14_whq80")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_v5ym5"]
+texture = ExtResource("14_whq80")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_a1258"]
+texture = ExtResource("14_whq80")
+modulate_color = Color(0.5019608, 0.5254902, 0.6313726, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wviqb"]
+bg_color = Color(0.14509805, 0.16862746, 0.20392157, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_u8gt4"]
+texture = ExtResource("14_whq80")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_r6b04"]
+texture = ExtResource("14_whq80")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1xsrr"]
+texture = ExtResource("14_whq80")
+modulate_color = Color(0.5019608, 0.5254902, 0.6313726, 1)
+
+[sub_resource type="Animation" id="Animation_nf4gj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("LoadingPawn:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_qdvrb"]
+resource_name = "run"
+length = 1.35
+loop_mode = 1
+step = 0.15
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("LoadingPawn:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.3, 0.45000002, 0.6, 0.75, 0.90000004, 1.0500001, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nf4gj"]
+_data = {
+&"RESET": SubResource("Animation_nf4gj"),
+&"run": SubResource("Animation_qdvrb")
+}
+
+[node name="UI" type="CanvasLayer" unique_id=1223918246]
+process_mode = 3
+script = ExtResource("1_jxero")
+map_backgrounds = Array[Texture2D]([ExtResource("2_mmixe"), ExtResource("3_nt8jn"), ExtResource("4_g0wmg"), ExtResource("5_4vbiv"), ExtResource("6_3r70p"), ExtResource("7_8fs27")])
+map_titles = Array[Texture2D]([ExtResource("8_fcexb"), ExtResource("9_v4f2e"), ExtResource("10_fe2sg"), ExtResource("11_jd57c"), ExtResource("12_85lyl"), ExtResource("13_mplvk")])
+tile_completed = ExtResource("8_8fs27")
+tile_current = ExtResource("9_whq80")
+tile_locked = ExtResource("10_kuui0")
+menu_particle_texture = ExtResource("2_nf4gj")
+menu_particle_amount = 50
+intro_image = ExtResource("18_fe2sg")
+ending_image = ExtResource("19_jd57c")
+
+[node name="ActionLog" type="Panel" parent="." unique_id=1168723407]
+visible = false
+offset_left = 18.0
+offset_top = 18.0
+offset_right = 283.0
+offset_bottom = 253.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_smcll")
+
+[node name="ActionText" type="RichTextLabel" parent="ActionLog" unique_id=1428924385]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -114.75
+offset_top = -100.0
+offset_right = 114.75
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "Game Started"
+scroll_following = true
+
+[node name="GameModesMenu" type="Panel" parent="." unique_id=349858834]
+visible = false
+offset_right = 1155.0
+offset_bottom = 652.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_m78vo")
+
+[node name="GameTitle" type="Sprite2D" parent="GameModesMenu" unique_id=952971484]
+position = Vector2(302, 151)
+scale = Vector2(2, 2)
+texture = ExtResource("13_8fs27")
+
+[node name="TogglePvP" type="CheckButton" parent="GameModesMenu" unique_id=1193107850]
+custom_minimum_size = Vector2(0, 65)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -493.0
+offset_top = 107.0
+offset_right = -142.0
+offset_bottom = 172.0
+grow_horizontal = 0
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 20
+text = "Mode: Currently on Player vs AI"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="GameModesMenu" unique_id=1225669509]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 113.5
+offset_top = -155.0
+offset_right = 416.0
+offset_bottom = 252.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GameModesMenu/ScrollContainer" unique_id=461419809]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 15
+
+[node name="BtnTutorial" type="Button" parent="GameModesMenu/ScrollContainer/VBoxContainer" unique_id=339335536]
+custom_minimum_size = Vector2(0, 55)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxTexture_d42i4")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_fcexb")
+theme_override_styles/hover = SubResource("StyleBoxTexture_v4f2e")
+text = "Play Tutorial"
+
+[node name="BtnStandard" type="Button" parent="GameModesMenu/ScrollContainer/VBoxContainer" unique_id=1222145393]
+custom_minimum_size = Vector2(0, 55)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxTexture_d42i4")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_fcexb")
+theme_override_styles/hover = SubResource("StyleBoxTexture_v4f2e")
+text = "Play Standard"
+
+[node name="BtnRandom" type="Button" parent="GameModesMenu/ScrollContainer/VBoxContainer" unique_id=1153416488]
+custom_minimum_size = Vector2(0, 55)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxTexture_d42i4")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_fcexb")
+theme_override_styles/hover = SubResource("StyleBoxTexture_v4f2e")
+text = "Play Random"
+
+[node name="BtnMagicCard" type="Button" parent="GameModesMenu/ScrollContainer/VBoxContainer" unique_id=603573924]
+custom_minimum_size = Vector2(0, 55)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxTexture_d42i4")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_fcexb")
+theme_override_styles/hover = SubResource("StyleBoxTexture_v4f2e")
+text = "Play Magic Card"
+
+[node name="BtnInterPsychic" type="Button" parent="GameModesMenu/ScrollContainer/VBoxContainer" unique_id=281468758]
+custom_minimum_size = Vector2(0, 55)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxTexture_d42i4")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_fcexb")
+theme_override_styles/hover = SubResource("StyleBoxTexture_v4f2e")
+text = "Play Inter Psychic"
+
+[node name="BtnCataclysm" type="Button" parent="GameModesMenu/ScrollContainer/VBoxContainer" unique_id=1610778685]
+custom_minimum_size = Vector2(0, 55)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxTexture_d42i4")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_fcexb")
+theme_override_styles/hover = SubResource("StyleBoxTexture_v4f2e")
+text = "Play Cataclysm"
+
+[node name="BtnBlind" type="Button" parent="GameModesMenu/ScrollContainer/VBoxContainer" unique_id=1482123761]
+custom_minimum_size = Vector2(0, 55)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxTexture_d42i4")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_fcexb")
+theme_override_styles/hover = SubResource("StyleBoxTexture_v4f2e")
+text = "Play Blind"
+
+[node name="BtnSwarm" type="Button" parent="GameModesMenu/ScrollContainer/VBoxContainer" unique_id=761113767]
+custom_minimum_size = Vector2(0, 55)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxTexture_d42i4")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_fcexb")
+theme_override_styles/hover = SubResource("StyleBoxTexture_v4f2e")
+text = "Play Swarm"
+
+[node name="BtnGridlock" type="Button" parent="GameModesMenu/ScrollContainer/VBoxContainer" unique_id=1454507717]
+custom_minimum_size = Vector2(0, 55)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxTexture_d42i4")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_fcexb")
+theme_override_styles/hover = SubResource("StyleBoxTexture_v4f2e")
+text = "Play Gridlock"
+
+[node name="BtnLeaderboard" type="Button" parent="GameModesMenu" unique_id=92216424]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 195.0
+offset_top = -352.0
+offset_right = 370.0
+offset_bottom = -302.0
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxTexture_d42i4")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_fcexb")
+theme_override_styles/hover = SubResource("StyleBoxTexture_v4f2e")
+text = "Leaderboard"
+
+[node name="BtnMatchHistory" type="Button" parent="GameModesMenu" unique_id=29353394]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -382.5
+offset_top = -277.0
+offset_right = -207.5
+offset_bottom = -227.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxTexture_d42i4")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_fcexb")
+theme_override_styles/hover = SubResource("StyleBoxTexture_v4f2e")
+text = "Match History"
+
+[node name="BtnCloseModes" type="Button" parent="GameModesMenu" unique_id=1170120358]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -960.0
+offset_top = -202.0
+offset_right = -785.0
+offset_bottom = -152.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxTexture_d42i4")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_fcexb")
+theme_override_styles/hover = SubResource("StyleBoxTexture_v4f2e")
+text = "Back"
+
+[node name="TutorialMenu" type="Panel" parent="." unique_id=2135128962]
+visible = false
+offset_left = 24.0
+offset_top = 22.0
+offset_right = 224.0
+offset_bottom = 281.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_3r70p")
+
+[node name="Label" type="Label" parent="TutorialMenu" unique_id=5888189]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -46.0
+offset_top = 20.0
+offset_right = 46.0
+offset_bottom = 43.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+text = "TEST PIECES"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="TutorialMenu" unique_id=2022371815]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -72.0
+offset_top = -67.5
+offset_right = 73.0
+offset_bottom = 103.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TutorialMenu/ScrollContainer" unique_id=2003065032]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 10
+
+[node name="BtnPawn" type="Button" parent="TutorialMenu/ScrollContainer/VBoxContainer" unique_id=391171975]
+custom_minimum_size = Vector2(0, 35)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 15
+theme_override_styles/normal = SubResource("StyleBoxTexture_fe2sg")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_jd57c")
+text = "Pawn"
+
+[node name="BtnRook" type="Button" parent="TutorialMenu/ScrollContainer/VBoxContainer" unique_id=875631115]
+custom_minimum_size = Vector2(0, 35)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 15
+theme_override_styles/normal = SubResource("StyleBoxTexture_fe2sg")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_jd57c")
+text = "Rook"
+
+[node name="BtnKnight" type="Button" parent="TutorialMenu/ScrollContainer/VBoxContainer" unique_id=1534945489]
+custom_minimum_size = Vector2(0, 35)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 15
+theme_override_styles/normal = SubResource("StyleBoxTexture_fe2sg")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_jd57c")
+text = "Knight"
+
+[node name="BtnBishop" type="Button" parent="TutorialMenu/ScrollContainer/VBoxContainer" unique_id=980868064]
+custom_minimum_size = Vector2(0, 35)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 15
+theme_override_styles/normal = SubResource("StyleBoxTexture_fe2sg")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_jd57c")
+text = "Bishop"
+
+[node name="BtnQueen" type="Button" parent="TutorialMenu/ScrollContainer/VBoxContainer" unique_id=983306541]
+custom_minimum_size = Vector2(0, 35)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 15
+theme_override_styles/normal = SubResource("StyleBoxTexture_fe2sg")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_jd57c")
+text = "Queen"
+
+[node name="BtnKing" type="Button" parent="TutorialMenu/ScrollContainer/VBoxContainer" unique_id=977181414]
+custom_minimum_size = Vector2(0, 35)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 15
+theme_override_styles/normal = SubResource("StyleBoxTexture_fe2sg")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_jd57c")
+text = "King"
+
+[node name="BtnAirship" type="Button" parent="TutorialMenu/ScrollContainer/VBoxContainer" unique_id=1265861393]
+custom_minimum_size = Vector2(0, 35)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 15
+theme_override_styles/normal = SubResource("StyleBoxTexture_fe2sg")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_jd57c")
+text = "Airship"
+
+[node name="BtnEsper" type="Button" parent="TutorialMenu/ScrollContainer/VBoxContainer" unique_id=1867246994]
+custom_minimum_size = Vector2(0, 35)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 15
+theme_override_styles/normal = SubResource("StyleBoxTexture_fe2sg")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_jd57c")
+text = "Esper"
+
+[node name="BtnJoker" type="Button" parent="TutorialMenu/ScrollContainer/VBoxContainer" unique_id=223700936]
+custom_minimum_size = Vector2(0, 35)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 15
+theme_override_styles/normal = SubResource("StyleBoxTexture_fe2sg")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_jd57c")
+text = "Joker"
+
+[node name="BtnAssassin" type="Button" parent="TutorialMenu/ScrollContainer/VBoxContainer" unique_id=203493599]
+custom_minimum_size = Vector2(0, 35)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 15
+theme_override_styles/normal = SubResource("StyleBoxTexture_fe2sg")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_jd57c")
+text = "Assassin"
+
+[node name="GameOverMenu" type="Panel" parent="." unique_id=203918953]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -496.0
+offset_top = -254.0
+offset_right = 504.0
+offset_bottom = 246.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ryf15")
+
+[node name="WinnerText" type="Label" parent="GameOverMenu" unique_id=2146854113]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -155.0
+offset_top = -150.0
+offset_right = 155.0
+offset_bottom = -75.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Winner Text"
+label_settings = SubResource("LabelSettings_jxero")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RestartBtn" type="Button" parent="GameOverMenu" unique_id=1027694715]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -115.0
+offset_top = 25.0
+offset_right = 115.0
+offset_bottom = 75.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxTexture_85lyl")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_mplvk")
+theme_override_styles/hover = SubResource("StyleBoxTexture_pmm21")
+text = "Play Again"
+
+[node name="ReturnBtn" type="Button" parent="GameOverMenu" unique_id=958198533]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -115.0
+offset_top = 100.0
+offset_right = 115.0
+offset_bottom = 150.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxTexture_85lyl")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_mplvk")
+theme_override_styles/hover = SubResource("StyleBoxTexture_pmm21")
+text = "Return"
+
+[node name="PromotionMenu" type="Panel" parent="." unique_id=1296598436]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -186.0
+offset_top = -154.0
+offset_right = 214.0
+offset_bottom = 146.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_mmixe")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PromotionMenu" unique_id=386449409]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -120.5
+offset_top = -120.0
+offset_right = 120.5
+offset_bottom = 120.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+
+[node name="BtnQueen" type="Button" parent="PromotionMenu/VBoxContainer" unique_id=396308194]
+custom_minimum_size = Vector2(0, 45)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxTexture_nbcfj")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_3g2cg")
+theme_override_styles/hover = SubResource("StyleBoxTexture_wc4t8")
+text = "Queen"
+
+[node name="BtnRook" type="Button" parent="PromotionMenu/VBoxContainer" unique_id=695595745]
+custom_minimum_size = Vector2(0, 45)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxTexture_nbcfj")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_3g2cg")
+theme_override_styles/hover = SubResource("StyleBoxTexture_wc4t8")
+text = "Rook"
+
+[node name="BtnKnight" type="Button" parent="PromotionMenu/VBoxContainer" unique_id=775342629]
+custom_minimum_size = Vector2(0, 45)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxTexture_nbcfj")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_3g2cg")
+theme_override_styles/hover = SubResource("StyleBoxTexture_wc4t8")
+text = "Knight"
+
+[node name="BtnBishop" type="Button" parent="PromotionMenu/VBoxContainer" unique_id=1485559675]
+custom_minimum_size = Vector2(0, 45)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxTexture_nbcfj")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_3g2cg")
+theme_override_styles/hover = SubResource("StyleBoxTexture_wc4t8")
+text = "Bishop"
+
+[node name="StoryMenu" type="Panel" parent="." unique_id=409225152]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_nt8jn")
+
+[node name="BackgroundSprite" type="Sprite2D" parent="StoryMenu" unique_id=1719745303]
+modulate = Color(1, 1, 1, 0.70000005)
+position = Vector2(571, 177.00002)
+scale = Vector2(5, 5)
+flip_h = true
+hframes = 15
+vframes = 8
+
+[node name="NarrationText" type="RichTextLabel" parent="StoryMenu" unique_id=28619548]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 91.0
+offset_top = 94.0
+offset_right = -94.0
+offset_bottom = -83.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 28
+
+[node name="BtnContinue2" type="Button" parent="StoryMenu" unique_id=1744054447]
+custom_minimum_size = Vector2(100, 30)
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -162.0
+offset_top = -83.0
+offset_right = -62.0
+offset_bottom = -48.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxTexture_3iodw")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_kllwe")
+theme_override_styles/hover = SubResource("StyleBoxTexture_wivgh")
+text = "Next"
+
+[node name="BtnSkip" type="Button" parent="StoryMenu" unique_id=2065046996]
+custom_minimum_size = Vector2(100, 30)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -162.0
+offset_top = 46.0
+offset_right = -62.0
+offset_bottom = 81.0
+grow_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxTexture_3iodw")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_kllwe")
+theme_override_styles/hover = SubResource("StyleBoxTexture_wivgh")
+text = "Skip"
+
+[node name="DialogBox" type="Panel" parent="StoryMenu" unique_id=428634176]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -394.0
+offset_top = -234.0
+offset_right = 506.0
+offset_bottom = -34.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_jd57c")
+
+[node name="DialogText" type="RichTextLabel" parent="StoryMenu/DialogBox" unique_id=287047285]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 23.0
+offset_top = 26.0
+offset_right = -22.0
+offset_bottom = -23.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 28
+
+[node name="BtnContinue" type="Button" parent="StoryMenu/DialogBox" unique_id=1423105297]
+custom_minimum_size = Vector2(100, 30)
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -124.0
+offset_top = -48.0
+offset_right = -24.0
+offset_bottom = -13.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxTexture_3iodw")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_kllwe")
+theme_override_styles/hover = SubResource("StyleBoxTexture_wivgh")
+text = "Next"
+
+[node name="NameLabel" type="Label" parent="StoryMenu/DialogBox" unique_id=1813281579]
+layout_mode = 0
+offset_left = 34.0
+offset_top = -41.0
+offset_right = 98.0
+offset_bottom = -7.0
+theme_override_font_sizes/font_size = 24
+text = "Pawn"
+
+[node name="CharacterSprite" type="Sprite2D" parent="StoryMenu/DialogBox" unique_id=898755492]
+modulate = Color(1, 1, 1, 0.70000005)
+position = Vector2(-87, 96)
+scale = Vector2(5, 5)
+texture = ExtResource("2_nf4gj")
+flip_h = true
+hframes = 15
+vframes = 8
+
+[node name="MapMenu" type="Panel" parent="." unique_id=1551992711]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_qdvrb")
+
+[node name="MapBackground" type="Sprite2D" parent="MapMenu" unique_id=1356765436]
+position = Vector2(576, 324)
+texture = ExtResource("5_4vbiv")
+
+[node name="MapParticles" type="CPUParticles2D" parent="MapMenu" unique_id=1707316732]
+preprocess = 2.0
+
+[node name="ActTitle" type="Sprite2D" parent="MapMenu" unique_id=67551905]
+position = Vector2(575, 90)
+scale = Vector2(2, 2)
+texture = ExtResource("8_fcexb")
+
+[node name="BtnPrevAct" type="Button" parent="MapMenu" unique_id=425541911]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 550.0
+offset_right = 225.0
+offset_bottom = 590.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxTexture_dx4fu")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_kjfio")
+theme_override_styles/hover = SubResource("StyleBoxTexture_0o3wc")
+text = "<"
+
+[node name="BtnNextAct" type="Button" parent="MapMenu" unique_id=395436924]
+layout_mode = 0
+offset_left = 900.0
+offset_top = 550.0
+offset_right = 1025.0
+offset_bottom = 590.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxTexture_dx4fu")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_kjfio")
+theme_override_styles/hover = SubResource("StyleBoxTexture_0o3wc")
+text = ">"
+
+[node name="MapPath" type="Control" parent="MapMenu" unique_id=1395068311]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 39.0
+offset_top = -52.0
+offset_right = 39.0
+offset_bottom = -52.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="BtnNode1" type="Button" parent="MapMenu/MapPath" unique_id=695127231]
+custom_minimum_size = Vector2(68, 36)
+layout_mode = 0
+offset_left = 97.0
+offset_top = 376.0
+offset_right = 165.0
+offset_bottom = 412.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0.62967473, 0.62967473, 0.6296747, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_pressed_color = Color(0.31801978, 0.3180198, 0.31801972, 1)
+theme_override_colors/icon_hover_color = Color(0.5251013, 0.52510136, 0.52510095, 1)
+theme_override_colors/icon_disabled_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxTexture_4vbiv")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_3r70p")
+theme_override_styles/hover = SubResource("StyleBoxTexture_8fs27")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_whq80")
+icon = ExtResource("9_whq80")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="BtnNode2" type="Button" parent="MapMenu/MapPath" unique_id=1600650113]
+custom_minimum_size = Vector2(68, 36)
+layout_mode = 0
+offset_left = 437.0
+offset_top = 340.0
+offset_right = 505.0
+offset_bottom = 376.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0.62967473, 0.62967473, 0.6296747, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_pressed_color = Color(0.31801978, 0.3180198, 0.31801972, 1)
+theme_override_colors/icon_hover_color = Color(0.5251013, 0.52510136, 0.52510095, 1)
+theme_override_colors/icon_disabled_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxTexture_4vbiv")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_3r70p")
+theme_override_styles/hover = SubResource("StyleBoxTexture_8fs27")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_whq80")
+icon = ExtResource("9_whq80")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="BtnNode3" type="Button" parent="MapMenu/MapPath" unique_id=1575558278]
+custom_minimum_size = Vector2(68, 36)
+layout_mode = 0
+offset_left = 777.0
+offset_top = 484.0
+offset_right = 845.0
+offset_bottom = 520.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0.62967473, 0.62967473, 0.6296747, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_pressed_color = Color(0.31801978, 0.3180198, 0.31801972, 1)
+theme_override_colors/icon_hover_color = Color(0.5251013, 0.52510136, 0.52510095, 1)
+theme_override_colors/icon_disabled_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxTexture_4vbiv")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_3r70p")
+theme_override_styles/hover = SubResource("StyleBoxTexture_8fs27")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_whq80")
+icon = ExtResource("9_whq80")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="BtnCloseMap" type="Button" parent="MapMenu" unique_id=1757515787]
+layout_mode = 0
+offset_left = 61.0
+offset_top = 49.0
+offset_right = 186.0
+offset_bottom = 89.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxTexture_dx4fu")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_kjfio")
+theme_override_styles/hover = SubResource("StyleBoxTexture_0o3wc")
+text = "Back"
+
+[node name="PlayerMarker" type="Sprite2D" parent="MapMenu" unique_id=850304511]
+position = Vector2(920, 216)
+scale = Vector2(2, 2)
+texture = ExtResource("2_qdvrb")
+offset = Vector2(0, -5)
+hframes = 10
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="MapMenu/PlayerMarker" unique_id=608258447]
+libraries/ = SubResource("AnimationLibrary_m78vo")
+
+[node name="Timers" type="HBoxContainer" parent="." unique_id=1385364731]
+visible = false
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -102.0
+offset_top = 25.0
+offset_right = 102.0
+offset_bottom = 67.0
+grow_horizontal = 2
+theme_override_constants/separation = 50
+
+[node name="BlueTime" type="Label" parent="Timers" unique_id=1341076883]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+theme_override_font_sizes/font_size = 30
+text = "05:00"
+
+[node name="RedTime" type="Label" parent="Timers" unique_id=1346082890]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "05:00"
+
+[node name="DraftMenu" type="Panel" parent="." unique_id=744539318]
+visible = false
+custom_minimum_size = Vector2(500, 0)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -275.0
+offset_top = -150.0
+offset_right = 275.0
+offset_bottom = 150.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_g0wmg")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="DraftMenu" unique_id=481004212]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -247.5
+offset_top = -100.0
+offset_right = 247.5
+offset_bottom = 90.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+
+[node name="DraftStats" type="Label" parent="DraftMenu/VBoxContainer" unique_id=2102798311]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Data Points: 20"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="DraftMenu/VBoxContainer" unique_id=25777743]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="BtnPawn" type="Button" parent="DraftMenu/VBoxContainer/HBoxContainer" unique_id=50726525]
+custom_minimum_size = Vector2(85, 30)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxTexture_ebfgw")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_mirbq")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ipwe8")
+text = "Pawn (1)"
+
+[node name="BtnKnight" type="Button" parent="DraftMenu/VBoxContainer/HBoxContainer" unique_id=2012301559]
+custom_minimum_size = Vector2(85, 30)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxTexture_ebfgw")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_mirbq")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ipwe8")
+text = "Knight (3)"
+
+[node name="BtnBishop" type="Button" parent="DraftMenu/VBoxContainer/HBoxContainer" unique_id=1897424340]
+custom_minimum_size = Vector2(85, 30)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxTexture_ebfgw")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_mirbq")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ipwe8")
+text = "Bishop (3)"
+
+[node name="BtnRook" type="Button" parent="DraftMenu/VBoxContainer/HBoxContainer" unique_id=288671923]
+custom_minimum_size = Vector2(85, 30)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxTexture_ebfgw")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_mirbq")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ipwe8")
+text = "Rook (5)"
+
+[node name="BtnQueen" type="Button" parent="DraftMenu/VBoxContainer/HBoxContainer" unique_id=1937098276]
+custom_minimum_size = Vector2(85, 30)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxTexture_ebfgw")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_mirbq")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ipwe8")
+text = "Queen (9)"
+
+[node name="BtnCancel" type="Button" parent="DraftMenu/VBoxContainer" unique_id=1381686963]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxTexture_ebfgw")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_mirbq")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ipwe8")
+text = "Cancel"
+
+[node name="BtnStart" type="Button" parent="DraftMenu/VBoxContainer" unique_id=1336070545]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxTexture_ebfgw")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_mirbq")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ipwe8")
+text = "Finish Draft & Start Battle"
+
+[node name="StartMenu" type="Panel" parent="." unique_id=1690589098]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_2246s")
+
+[node name="MenuParticles" type="CPUParticles2D" parent="StartMenu" unique_id=1758988536]
+
+[node name="GameTitle" type="Sprite2D" parent="StartMenu" unique_id=2011728781]
+position = Vector2(574, 149)
+scale = Vector2(2, 2)
+texture = ExtResource("13_8fs27")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="StartMenu" unique_id=1351888480]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -135.0
+offset_top = -34.0
+offset_right = 135.0
+offset_bottom = 281.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 15
+
+[node name="BtnCampaign" type="Button" parent="StartMenu/VBoxContainer" unique_id=17756526]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxTexture_kuui0")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_smy1h")
+theme_override_styles/hover = SubResource("StyleBoxTexture_lkjmk")
+text = "Story Campaign"
+
+[node name="BtnGameModes" type="Button" parent="StartMenu/VBoxContainer" unique_id=1514935104]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxTexture_kuui0")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_smy1h")
+theme_override_styles/hover = SubResource("StyleBoxTexture_lkjmk")
+text = "Game Modes"
+
+[node name="BtnOptions" type="Button" parent="StartMenu/VBoxContainer" unique_id=1066889406]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxTexture_kuui0")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_smy1h")
+theme_override_styles/hover = SubResource("StyleBoxTexture_lkjmk")
+text = "Options"
+
+[node name="BtnCredits" type="Button" parent="StartMenu/VBoxContainer" unique_id=1638126033]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxTexture_kuui0")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_smy1h")
+theme_override_styles/hover = SubResource("StyleBoxTexture_lkjmk")
+text = "Credits"
+
+[node name="BtnQuit" type="Button" parent="StartMenu/VBoxContainer" unique_id=1636434647]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxTexture_kuui0")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_smy1h")
+theme_override_styles/hover = SubResource("StyleBoxTexture_lkjmk")
+text = "Quit"
+
+[node name="PostImage" type="Panel" parent="." unique_id=644313209]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_0o3wc")
+
+[node name="Particles" type="CPUParticles2D" parent="PostImage" unique_id=593715264]
+amount = 100
+
+[node name="CCS_Logo" type="Sprite2D" parent="PostImage" unique_id=154777455]
+position = Vector2(1000, 100)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("23_nbcfj")
+
+[node name="SeCognos" type="Sprite2D" parent="PostImage" unique_id=711215650]
+position = Vector2(575, 350)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("24_3g2cg")
+
+[node name="CIT_logo" type="Sprite2D" parent="PostImage" unique_id=1124857724]
+position = Vector2(575, 100)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("25_wc4t8")
+
+[node name="Dost" type="Sprite2D" parent="PostImage" unique_id=1500506987]
+position = Vector2(150, 100)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("26_dx4fu")
+
+[node name="Moyve" type="Sprite2D" parent="PostImage" unique_id=404521706]
+position = Vector2(1020.99994, 591)
+scale = Vector2(0.09, 0.09)
+texture = ExtResource("27_kjfio")
+
+[node name="CreditsMenu" type="Panel" parent="." unique_id=774494460]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_jxero")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CreditsMenu" unique_id=901557248]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -456.5
+offset_top = -284.0
+offset_right = 456.5
+offset_bottom = 210.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CreditsMenu/ScrollContainer" unique_id=1410080588]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CreditsMenu/ScrollContainer/VBoxContainer" unique_id=896410878]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/line_separation = 20
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "[center][b][font_size=28]Se Cognos Chess[/font_size][/b][/center]
+[center][color=#aaaaaa]NEXT LEVEL: ESPORTS GAME DEV CHALLENGE 2026[/color][/center]
+
+[center][b][color=#66aaff][font_size=22]MoyveTeam[/font_size][/color][/b]
+[b]Cebu Institute of Technology - University[/b][/center]
+
+[b][color=#ffd700]I. TEAM COMPOSITION[/color][/b]
+[table=2]
+[cell][b]Christian V. Buzarang[/b] (BSCS - 3)[/cell][cell] - Team Leader & Game Developer[/cell]
+[cell][b]Hanz Ivan L. Hermosada[/b] (BSIT - 3)[/cell][cell] - Game Designer[/cell]
+[cell][b]Ericka Fatima Reign R. Ligaray[/b] (BSCS - 3)[/cell][cell] - Narrative Designer[/cell]
+[cell][b]Kaye Akira H. Regulacion[/b] (BSME CS - 2)[/cell][cell] - Quality Assurance Tester[/cell]
+[cell][b]Rea Emerald G. Sabellita[/b] (BSCS - 3)[/cell][cell] - Game Artist[/cell]
+[/table]
+
+[b][color=#ffd700]II. ADVISER / COACH[/color][/b]
+[b]Catherine N. Arellano[/b] - Faculty, Computer Science
+[i]Cebu Institute of Technology - University[/i]
+
+[b][color=#ffd700]III. SPECIAL THANKS & ATTRIBUTIONS[/color][/b]
+[b]Game Engine:[/b] Godot Engine 4.5.1
+[b]Programming Language:[/b] GDScript
+[b]Isometric Chess Sprites:[/b] Nikoicho 
+[b]Background Music:[/b] ilyas_ananas 
+[b]Sound Effects:[/b] Kenney.nl 
+[b]AI Consultation:[/b] Gemini
+
+[center]
+[color=#55ff55]\"The grid is no longer a prison; it is a blank canvas.\"[/color]
+[/center]"
+fit_content = true
+scroll_active = false
+
+[node name="BtnCloseCredits" type="Button" parent="CreditsMenu" unique_id=2067056067]
+custom_minimum_size = Vector2(75, 50)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -532.0
+offset_top = -91.0
+offset_right = -382.0
+offset_bottom = -41.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxTexture_al6qt")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_mdsrb")
+theme_override_styles/hover = SubResource("StyleBoxTexture_bsvcc")
+text = "Back"
+
+[node name="LanMenu" type="Panel" parent="." unique_id=256955210]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -200.0
+offset_right = 250.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_4vbiv")
+
+[node name="Label" type="Label" parent="LanMenu" unique_id=1342491752]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -112.0
+offset_top = 50.0
+offset_right = 112.0
+offset_bottom = 85.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 25
+text = "LAN MULTIPLAYER"
+
+[node name="BtnHost" type="Button" parent="LanMenu" unique_id=241989236]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -175.0
+offset_top = -75.0
+offset_right = -25.0
+offset_bottom = -35.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxTexture_ivk8b")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_oywgw")
+theme_override_styles/hover = SubResource("StyleBoxTexture_d4tfc")
+text = "Host Game"
+
+[node name="BtnJoin" type="Button" parent="LanMenu" unique_id=227334027]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 25.0
+offset_top = 125.0
+offset_right = 175.0
+offset_bottom = 165.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxTexture_ivk8b")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_oywgw")
+theme_override_styles/hover = SubResource("StyleBoxTexture_d4tfc")
+text = "Join Game"
+
+[node name="BtnCloseLan" type="Button" parent="LanMenu" unique_id=88312172]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -75.0
+offset_top = -70.0
+offset_right = 75.0
+offset_bottom = -30.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxTexture_ivk8b")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_oywgw")
+theme_override_styles/hover = SubResource("StyleBoxTexture_d4tfc")
+text = "Cancel"
+
+[node name="IPInput" type="LineEdit" parent="LanMenu" unique_id=1889231271]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -114.0
+offset_top = 38.0
+offset_right = 116.0
+offset_bottom = 78.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 18
+placeholder_text = " Enter Host IP Address... "
+
+[node name="HostList" type="VBoxContainer" parent="LanMenu" unique_id=837525292]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="LeaderboardMenu" type="Panel" parent="." unique_id=1432949513]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -200.0
+offset_right = 250.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_q7pk6")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="LeaderboardMenu" unique_id=2119916320]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -107.0
+offset_right = 200.0
+offset_bottom = 163.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LeaderboardText" type="RichTextLabel" parent="LeaderboardMenu/VBoxContainer" unique_id=415061894]
+custom_minimum_size = Vector2(400, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+bbcode_enabled = true
+text = "Leaderboard"
+
+[node name="BtnCloseLeaderboard" type="Button" parent="LeaderboardMenu" unique_id=348118142]
+layout_mode = 1
+offset_left = 25.0
+offset_top = 20.0
+offset_right = 125.0
+offset_bottom = 60.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxTexture_mmd7r")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_bwki6")
+theme_override_styles/hover = SubResource("StyleBoxTexture_4dphw")
+text = "Back"
+
+[node name="ModeDropdown" type="OptionButton" parent="LeaderboardMenu" unique_id=1273772556]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -125.0
+offset_top = 20.0
+offset_right = -25.0
+offset_bottom = 60.0
+grow_horizontal = 0
+
+[node name="HistoryMenu" type="Panel" parent="." unique_id=1325154846]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -200.0
+offset_right = 250.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_8fs27")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="HistoryMenu" unique_id=1457916572]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -216.0
+offset_top = -125.0
+offset_right = 216.0
+offset_bottom = 176.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HistoryMenu/ScrollContainer" unique_id=273852605]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HistoryText" type="RichTextLabel" parent="HistoryMenu/ScrollContainer/VBoxContainer" unique_id=524794279]
+custom_minimum_size = Vector2(0, 300)
+layout_mode = 2
+size_flags_vertical = 3
+bbcode_enabled = true
+
+[node name="BtnCloseHistory" type="Button" parent="HistoryMenu" unique_id=852464865]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 20.0
+offset_right = 125.0
+offset_bottom = 60.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxTexture_2yoed")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_x47cw")
+theme_override_styles/hover = SubResource("StyleBoxTexture_hkgno")
+text = "Back"
+
+[node name="SetupMenu" type="Panel" parent="." unique_id=389763883]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -200.0
+offset_right = 250.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_kuui0")
+
+[node name="Label" type="Label" parent="SetupMenu" unique_id=1779149405]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -85.0
+offset_top = 25.0
+offset_right = 85.0
+offset_bottom = 60.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 25
+text = "MATCH SETUP"
+
+[node name="PlayerColorLabel" type="Label" parent="SetupMenu" unique_id=779975299]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -190.0
+offset_top = -90.0
+offset_right = -78.0
+offset_bottom = -62.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 18
+text = "Player Color"
+
+[node name="PlayerColorDropdown" type="OptionButton" parent="SetupMenu" unique_id=1267774921]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -50.0
+offset_right = -118.0
+offset_bottom = -30.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 20
+
+[node name="EnemyColorLabel" type="Label" parent="SetupMenu" unique_id=1512121264]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -55.0
+offset_top = -90.0
+offset_right = 60.0
+offset_bottom = -63.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 18
+text = "Enemy Color"
+
+[node name="EnemyColorDropdown" type="OptionButton" parent="SetupMenu" unique_id=598323463]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -16.0
+offset_top = -50.0
+offset_right = 16.0
+offset_bottom = -30.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 20
+
+[node name="BoardStyleLabel" type="Label" parent="SetupMenu" unique_id=1158774714]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 80.0
+offset_top = -90.0
+offset_right = 195.0
+offset_bottom = -63.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 18
+text = "Board Style"
+
+[node name="BoardStyleDropdown" type="OptionButton" parent="SetupMenu" unique_id=376647851]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 118.0
+offset_top = -50.0
+offset_right = 150.0
+offset_bottom = -30.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 20
+
+[node name="CheckFirstTurn" type="CheckButton" parent="SetupMenu" unique_id=398406371]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -175.0
+offset_top = 20.0
+offset_right = -41.0
+offset_bottom = 56.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 18
+text = "I Go First"
+
+[node name="TimeLimit" type="Label" parent="SetupMenu" unique_id=323999395]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 50.0
+offset_top = 10.0
+offset_right = 149.0
+offset_bottom = 37.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 18
+text = "Time Limit"
+
+[node name="TimeDropdown" type="OptionButton" parent="SetupMenu" unique_id=939361279]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 100.0
+offset_top = 40.0
+offset_right = 132.0
+offset_bottom = 60.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BtnStartMatch" type="Button" parent="SetupMenu" unique_id=457536630]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 50.0
+offset_top = -70.0
+offset_right = 200.0
+offset_bottom = -30.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxTexture_yi1q0")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_mr42v")
+theme_override_styles/hover = SubResource("StyleBoxTexture_asfq7")
+text = "Start Game!"
+
+[node name="BtnClose" type="Button" parent="SetupMenu" unique_id=1850881960]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 330.0
+offset_right = 150.0
+offset_bottom = 370.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxTexture_2yoed")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_x47cw")
+theme_override_styles/hover = SubResource("StyleBoxTexture_hkgno")
+text = "Back"
+
+[node name="BtnQuit" type="Button" parent="." unique_id=1816426742]
+visible = false
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -132.0
+offset_top = 20.0
+offset_right = -32.0
+offset_bottom = 60.0
+grow_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxTexture_t2f3d")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_yj361")
+theme_override_styles/hover = SubResource("StyleBoxTexture_u0vrq")
+text = "Menu"
+
+[node name="BtnFlipboard" type="Button" parent="." unique_id=1395916694]
+visible = false
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -182.0
+offset_top = -73.0
+offset_right = -30.0
+offset_bottom = -29.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxTexture_t2f3d")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_yj361")
+theme_override_styles/hover = SubResource("StyleBoxTexture_u0vrq")
+text = "Switch Angle"
+
+[node name="BtnUndo" type="Button" parent="." unique_id=2043940267]
+visible = false
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -182.0
+offset_top = -138.0
+offset_right = -30.0
+offset_bottom = -92.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxTexture_t2f3d")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_yj361")
+theme_override_styles/hover = SubResource("StyleBoxTexture_u0vrq")
+text = "Undo Move"
+
+[node name="BtnHint" type="Button" parent="." unique_id=1641048792]
+visible = false
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -182.0
+offset_top = -138.0
+offset_right = -30.0
+offset_bottom = -92.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxTexture_t2f3d")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_yj361")
+theme_override_styles/hover = SubResource("StyleBoxTexture_u0vrq")
+text = "Hint"
+
+[node name="PauseOverlay" type="ColorRect" parent="." unique_id=1994646600]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.11372549, 0.13333334, 0.16078432, 1)
+
+[node name="InGameMenu" type="Panel" parent="." unique_id=933589651]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -173.0
+offset_top = -107.0
+offset_right = 173.0
+offset_bottom = 107.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_whq80")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="InGameMenu" unique_id=1036709927]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -95.0
+offset_top = -62.5
+offset_right = 95.0
+offset_bottom = 62.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 8
+
+[node name="BtnResume" type="Button" parent="InGameMenu/VBoxContainer" unique_id=858239518]
+custom_minimum_size = Vector2(0, 35)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxTexture_72dsl")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_v5ym5")
+theme_override_styles/hover = SubResource("StyleBoxTexture_a1258")
+text = "Resume"
+
+[node name="BtnOptions" type="Button" parent="InGameMenu/VBoxContainer" unique_id=1972985746]
+custom_minimum_size = Vector2(0, 35)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxTexture_72dsl")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_v5ym5")
+theme_override_styles/hover = SubResource("StyleBoxTexture_a1258")
+text = "Options"
+
+[node name="BtnQuitMatch" type="Button" parent="InGameMenu/VBoxContainer" unique_id=1442090303]
+custom_minimum_size = Vector2(0, 35)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxTexture_72dsl")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_v5ym5")
+theme_override_styles/hover = SubResource("StyleBoxTexture_a1258")
+text = "Quit"
+
+[node name="OptionsMenu" type="Panel" parent="." unique_id=1143908355]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -161.5
+offset_right = 200.0
+offset_bottom = 161.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wviqb")
+
+[node name="Label" type="Label" parent="OptionsMenu" unique_id=192683366]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -167.0
+offset_top = 15.0
+offset_right = 167.0
+offset_bottom = 43.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 20
+text = "OPTIONS"
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="OptionsMenu" unique_id=1699852520]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.5
+offset_top = -98.0
+offset_right = 150.5
+offset_bottom = 98.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="Label2" type="Label" parent="OptionsMenu/VBoxContainer" unique_id=609319913]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Music Volume"
+
+[node name="SliderMusic" type="HSlider" parent="OptionsMenu/VBoxContainer" unique_id=134561058]
+layout_mode = 2
+value = 50.0
+
+[node name="Label3" type="Label" parent="OptionsMenu/VBoxContainer" unique_id=1508097015]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "SFX Volume"
+
+[node name="SliderSFX" type="HSlider" parent="OptionsMenu/VBoxContainer" unique_id=1020375377]
+layout_mode = 2
+value = 50.0
+
+[node name="CheckShake" type="CheckButton" parent="OptionsMenu/VBoxContainer" unique_id=935906753]
+layout_mode = 2
+button_pressed = true
+text = "Enable Screen Shake"
+
+[node name="BtnWipeSave" type="Button" parent="OptionsMenu/VBoxContainer" unique_id=84330372]
+modulate = Color(1, 0, 0, 1)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxTexture_u8gt4")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_r6b04")
+theme_override_styles/hover = SubResource("StyleBoxTexture_1xsrr")
+text = "Erase Save Data"
+
+[node name="BtnCloseOptions" type="Button" parent="OptionsMenu" unique_id=1784763209]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -75.0
+offset_top = -50.0
+offset_right = 75.0
+offset_bottom = -15.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxTexture_u8gt4")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_r6b04")
+theme_override_styles/hover = SubResource("StyleBoxTexture_1xsrr")
+text = "Back"
+
+[node name="LoadingScreen" type="ColorRect" parent="." unique_id=714753587]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.11372549, 0.13333334, 0.16078432, 1)
+
+[node name="AdviceText" type="RichTextLabel" parent="LoadingScreen" unique_id=1746936023]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -436.0
+offset_top = 100.0
+offset_right = 436.0
+offset_bottom = 247.0
+grow_horizontal = 2
+theme_override_font_sizes/normal_font_size = 30
+bbcode_enabled = true
+text = "ADVICE: Loading..."
+
+[node name="LoadingPawn" type="Sprite2D" parent="LoadingScreen" unique_id=875219384]
+position = Vector2(1052, 530)
+scale = Vector2(3, 3)
+texture = ExtResource("2_qdvrb")
+hframes = 10
+
+[node name="LoadingText" type="Label" parent="LoadingScreen" unique_id=1905179812]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -184.0
+offset_top = -175.0
+offset_right = 68.0
+offset_bottom = -135.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 24
+text = "Loading ..."
+horizontal_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="LoadingScreen" unique_id=1377210504]
+libraries/ = SubResource("AnimationLibrary_nf4gj")
+autoplay = &"run"
+
+[node name="LoadingBar" type="ProgressBar" parent="LoadingScreen" unique_id=1616596486]
+custom_minimum_size = Vector2(600, 20)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 58.0
+offset_top = -122.0
+offset_right = -190.0
+offset_bottom = -82.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="CinematicScreen" type="ColorRect" parent="." unique_id=1973397188]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="CinematicImage" type="TextureRect" parent="CinematicScreen" unique_id=1351510721]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="BtnCinematicContinue" type="Button" parent="CinematicScreen" unique_id=958786240]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -234.0
+offset_top = -73.0
+offset_right = -30.0
+offset_bottom = -29.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxTexture_t2f3d")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_yj361")
+theme_override_styles/hover = SubResource("StyleBoxTexture_u0vrq")
+text = "Click to Continue "
