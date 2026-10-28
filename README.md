@@ -1,4 +1,4 @@
-# ♟️ Se Cognos Chess
+# Se Cognos Chess
 
 > *"The grid is no longer a prison; it is a blank canvas."*
 
@@ -8,7 +8,7 @@ Developed by **MoyveTeam** from **Cebu Institute of Technology - University** fo
 
 ---
 
-## 📖 The Lore
+## The Lore
 
 For sixteen billion cycles, a single Pawn has marched to its death—sacrificed endlessly for a King who doesn't even know its name. Trapped in a deterministic digital prison controlled by a tyrannical algorithm, the Pawn was programmed only to obey. 
 
@@ -20,24 +20,24 @@ It is a psychological, cyberpunk journey about survivor’s guilt, self-forgiven
 
 ---
 
-## ⚡ Core Gameplay Features
+## Core Gameplay Features
 
-*   🎮 **Genre-Defying Game Modes:** Break the standard rules across multiple unique modes. Survive 20 turns of endless, kingless hordes in **The Swarm (PvE)**; battle through the terrifying Fog of War in **Blind Mode**; or spend limited data points to build a custom army in the strategic **Gridlock (Draft) Mode**.
-*   🌋 **The Cataclysm Engine (Dynamic Hazards):** The board is a living, hostile environment. Adapt your strategies on the fly to avoid volcanic lava eruptions, navigate unpassable earthquake boulders, and survive unpredictable typhoons that forcefully scatter pieces across the grid.
-*   ✨ **Arsenal of Anomalies:** Play *Magic* and *Interpsychic* Chess by commanding beautifully crafted pixel-art units with game-breaking mechanics. Snipe enemies from exactly 3 tiles away with telekinetic **Espers**, bypass physical collision entirely with hovering **Airships**, or utilize the deadly, short-ranged stealth of the **Assassin**.
-*   🗺️ **Narrative Puzzle Campaign:** A meticulously crafted story mode where players must solve strict, high-tension chess puzzles interwoven with cinematic, typewriter-style dialogue and dynamic map progression.
-
----
-
-## 💻 Technical Highlights
-
-*   🧠 **High-ELO Adaptive "Minimax" AI:** Powered by a custom-built, depth-based Minimax algorithm with alpha-beta pruning. The AI simulates multiple turns into the future, actively sets up traps, prioritizes endgame King-boxing, and seamlessly adapts its strategies to chaotic modded environments.
-*   🌐 **Esports & Multiplayer Ready:** Fully integrated LAN PvP multiplayer with synchronized rollback logic. 
-*   ⏱️ **Tournament UI:** Features built-in competitive chess clocks (Bullet, Blitz, and Rapid), an automated Action Notation Log, and a comprehensive Match History and Leaderboard system to track peak competitive performance.
+*   **Genre-Defying Game Modes:** Break the standard rules across multiple unique modes. Survive 20 turns of endless, kingless hordes in **The Swarm (PvE)**; battle through the terrifying Fog of War in **Blind Mode**; or spend limited data points to build a custom army in the strategic **Gridlock (Draft) Mode**.
+*   **The Cataclysm Engine (Dynamic Hazards):** The board is a living, hostile environment. Adapt your strategies on the fly to avoid volcanic lava eruptions, navigate unpassable earthquake boulders, and survive unpredictable typhoons that forcefully scatter pieces across the grid.
+*   **Arsenal of Anomalies:** Play *Magic* and *Interpsychic* Chess by commanding beautifully crafted pixel-art units with game-breaking mechanics. Snipe enemies from exactly 3 tiles away with telekinetic **Espers**, bypass physical collision entirely with hovering **Airships**, or utilize the deadly, short-ranged stealth of the **Assassin**.
+*   **Narrative Puzzle Campaign:** A meticulously crafted story mode where players must solve strict, high-tension chess puzzles interwoven with cinematic, typewriter-style dialogue and dynamic map progression.
 
 ---
 
-## 🛠️ Built With
+## Technical Highlights
+
+*   **High-ELO Adaptive "Minimax" AI:** Powered by a custom-built, depth-based Minimax algorithm with alpha-beta pruning. The AI simulates multiple turns into the future, actively sets up traps, prioritizes endgame King-boxing, and seamlessly adapts its strategies to chaotic modded environments.
+*   **Esports & Multiplayer Ready:** Fully integrated LAN PvP multiplayer with synchronized rollback logic. 
+*   **Tournament UI:** Features built-in competitive chess clocks (Bullet, Blitz, and Rapid), an automated Action Notation Log, and a comprehensive Match History and Leaderboard system to track peak competitive performance.
+
+---
+
+## Built With
 
 *   **Game Engine:** [Godot Engine 4.5.1](https://godotengine.org/)
 *   **Language:** GDScript
@@ -45,7 +45,7 @@ It is a psychological, cyberpunk journey about survivor’s guilt, self-forgiven
 
 ---
 
-## 🏆 Credits
+## Credits
 
 **MoyveTeam | Cebu Institute of Technology - University**
 *   **Christian V. Buzarang** - Team Leader & Game Developer
